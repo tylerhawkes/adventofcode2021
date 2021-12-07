@@ -3,8 +3,8 @@
 // mod day03;
 // mod day04;
 // mod day05;
-mod day06;
-// mod day07;
+// mod day06;
+mod day07;
 // mod day08;
 // mod day09;
 // mod day10;
@@ -30,8 +30,8 @@ fn main() {
   // dbg!(day03::compute(include_str!("../input/day03.txt")));
   // dbg!(day04::compute(include_str!("../input/day04.txt")));
   // dbg!(day05::compute(include_str!("../input/day05.txt")));
-  dbg!(day06::compute(include_str!("../input/day06.txt")));
-  // dbg!(day07::compute(include_str!("../input/day07.txt")));
+  // dbg!(day06::compute(include_str!("../input/day06.txt")));
+  dbg!(day07::compute(include_str!("../input/day07.txt")));
   // dbg!(day08::compute(include_str!("../input/day08.txt")));
   // dbg!(day09::compute(include_str!("../input/day09.txt")));
   // dbg!(day10::compute(include_str!("../input/day10.txt")));
