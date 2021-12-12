@@ -7,8 +7,8 @@
 // mod day07;
 // mod day08;
 // mod day09;
-mod day10;
-// mod day11;
+// mod day10;
+mod day11;
 // mod day12;
 // mod day13;
 // mod day14;
@@ -34,8 +34,8 @@ fn main() {
   // dbg!(day07::compute(include_str!("../input/day07.txt")));
   // dbg!(day08::compute(include_str!("../input/day08.txt")));
   // dbg!(day09::compute(include_str!("../input/day09.txt")));
-  dbg!(day10::compute(include_str!("../input/day10.txt")));
-  // dbg!(day11::compute(include_str!("../input/day11.txt")));
+  // dbg!(day10::compute(include_str!("../input/day10.txt")));
+  dbg!(day11::compute(include_str!("../input/day11.txt")));
   // dbg!(day12::compute(include_str!("../input/day12.txt")));
   // dbg!(day13::compute(include_str!("../input/day13.txt")));
   // dbg!(day14::compute(include_str!("../input/day14.txt")));
