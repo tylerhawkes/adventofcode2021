@@ -11,17 +11,32 @@ pub fn compute(input: &str) -> (usize, usize) {
   let risk = search(&risk_map);
   let big_risk_map = expand_map(&risk_map);
   let risk_5 = search(&big_risk_map);
-  let max_x = big_risk_map[0].len();
-  let max_y = big_risk_map.len();
-  let start = Instant::now();
-  let (_path, astar_risk) = pathfinding::prelude::astar(
-    &(0_usize, 0_usize),
-    |&(x, y)| neighbors((x, y), max_x, max_y).map(|(x, y)| ((x, y), big_risk_map[y][x] as usize)),
-    |&(x, y)| max_x - 1 - x + max_y - 1 - y,
-    |&(x, y)| x == max_x - 1 && y == max_y - 1,
-  )
-  .unwrap();
-  dbg!((astar_risk, start.elapsed()));
+  {
+    let max_x = big_risk_map[0].len();
+    let max_y = big_risk_map.len();
+    let start = Instant::now();
+    let mut success_count = 0;
+    let mut heuristic_count = 0;
+    let mut successors_count = 0;
+    let (_path, astar_risk) = pathfinding::prelude::astar(
+      &(0_usize, 0_usize),
+      |&(x, y)| {
+        successors_count += 1;
+        neighbors((x, y), max_x, max_y).map(|(x, y)| ((x, y), big_risk_map[y][x] as usize))
+      },
+      |&(x, y)| {
+        heuristic_count += 1;
+        max_x - 1 - x + max_y - 1 - y
+      },
+      |&(x, y)| {
+        success_count += 1;
+        x == max_x - 1 && y == max_y - 1
+      },
+    )
+    .unwrap();
+    dbg!((astar_risk, start.elapsed()));
+    dbg!((successors_count, heuristic_count, success_count));
+  }
   (risk, risk_5)
 }
 
