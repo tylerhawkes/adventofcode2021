@@ -20,9 +20,9 @@ use std::time::Instant;
 // mod day18;
 // mod day19;
 // mod day20;
-mod day21;
+// mod day21;
 // mod day22;
-// mod day23;
+mod day23;
 // mod day24;
 // mod day25;
 
@@ -48,9 +48,9 @@ fn main() {
   // dbg!(day18::compute(include_str!("../input/day18.txt")))
   // dbg!(day19::compute(include_str!("../input/day19.txt")));
   // dbg!(day20::compute(include_str!("../input/day20.txt")));
-  dbg!(day21::compute(include_str!("../input/day21.txt")));
+  // dbg!(day21::compute(include_str!("../input/day21.txt")));
   // dbg!(day22::compute(include_str!("../input/day22.txt")));
-  // dbg!(day23::compute(include_str!("../input/day23.txt")));
+  dbg!(day23::compute(include_str!("../input/day23.txt")));
   // dbg!(day24::compute(include_str!("../input/day24.txt")));
   // dbg!(day25::compute(include_str!("../input/day25.txt")));
   println!("took {:?}", start.elapsed());
