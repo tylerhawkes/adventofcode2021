@@ -21,8 +21,7 @@ use std::time::Instant;
 // mod day19;
 // mod day20;
 // mod day21;
-mod day22;
-// mod day23;
+mod day23;
 // mod day24;
 // mod day25;
 
@@ -112,7 +111,7 @@ off x=-70369..-16548,y=22648..78696,z=-1892..86821
 on x=-53470..21291,y=-120233..-33476,z=-44150..38147
 off x=-93533..-4276,y=-16170..68771,z=-104985..-24507"
   ));
-  // dbg!(day23::compute(include_str!("../input/day23.txt")));
+  dbg!(day23::compute(include_str!("../input/day23.txt")));
   // dbg!(day24::compute(include_str!("../input/day24.txt")));
   // dbg!(day25::compute(include_str!("../input/day25.txt")));
   println!("took {:?}", start.elapsed());
